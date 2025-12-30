@@ -94,6 +94,11 @@ export default function Home() {
     }
   };
 
+  // Handle purchase button click - redirects to WhatsApp
+  const handlePurchaseClick = () => {
+    window.open('https://wa.me/2349133555573', '_blank', 'noopener,noreferrer');
+  };
+
   // Array of image filenames a through t (20 images)
   const wineImages = [
     'a.jpg', 'b.jpg', 'c.jpg', 'd.jpg', 'e.jpg', 'f.jpg', 'g.jpg', 'h.jpg', 
@@ -417,7 +422,10 @@ export default function Home() {
                   <img src={`/image/${imageName}`} alt="Wine Collection" />
                   <div className="image-overlay-collection"></div>
                 </div>
-                <button className="purchase-button">
+                <button 
+                  className="purchase-button"
+                  onClick={handlePurchaseClick}
+                >
                   Purchase
                 </button>
               </div>
