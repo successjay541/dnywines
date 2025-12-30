@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import assetFetcher from './fetcher.ts';
+import assetFetcher from './fetcher';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
